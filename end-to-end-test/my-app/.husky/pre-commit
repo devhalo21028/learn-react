@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+cd end-to-end-test/my-app
+npm test -- --watchAll=false

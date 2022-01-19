@@ -33,13 +33,13 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint . --ext .ts,.tsx",
-    "lint:fix": "npm run lint -- --fix"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+    "lint:fix": "npm run lint -- --fix",
+    "prepare": "cd ../.. && husky install end-to-end-test/my-app/.husky",
+    "commitlint": "commitlint",
+    "release": "standard-version",
+    "release:patch": "standard-version --release-as patch",
+    "release:minor": "standard-version --release-as minor",
+    "release:major": "standard-version --release-as major"
   },
   "browserslist": {
     "production": [
@@ -54,9 +54,13 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^16.0.3",
+    "@commitlint/config-conventional": "^16.0.0",
     "@types/axios": "^0.14.0",
     "@types/redux-persist": "^4.3.1",
     "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-airbnb-typescript": "^16.1.0"
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "husky": "^7.0.4",
+    "standard-version": "^9.3.2"
   }
 }
