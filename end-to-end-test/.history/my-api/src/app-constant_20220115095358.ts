@@ -1,3 +1,0 @@
-export enum ErrorCode {
-  INVALID_CREDENTIALS = 'INVALID_CREDENTIALS',
-}
