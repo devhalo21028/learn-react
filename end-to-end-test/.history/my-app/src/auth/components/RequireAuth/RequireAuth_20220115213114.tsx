@@ -1,0 +1,3 @@
+function RequireAuth({ children }) {
+  
+}
